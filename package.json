@@ -1,0 +1,29 @@
+{
+    "name": "stylib",
+    "version": "1.0.0",
+    "family": "alimobstyle",
+    "keywords": [
+        "stylib"
+    ],
+    "description": "alibaba mobile css theme",
+    "homepage": "https://github.com/alimobstyle/stylib",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alimobstyle/stylib"
+    },
+    "bugs": {
+        "url": "https://github.com/alimobstyle/stylib/issues"
+    },
+    "spm": {
+        "alias": {
+            "base":    "alimobstyle/base/1.0.0/base.css",
+            "button":  "alimobstyle/button/1.0.1/button.css",
+            "layout":  "alimobstyle/layout/1.0.0/layout.css",
+            "form":    "alimobstyle/form/1.0.1/form.css",
+            "captcha": "alimobstyle/captcha/1.0.0/captcha.css",
+            "message": "alimobstyle/message/1.0.0/message.css",
+            "loading": "alimobstyle/loading/1.0.0/loading.css"
+        },
+        "output": ["stylib.css"]
+    }
+}

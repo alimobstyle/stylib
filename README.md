@@ -1,4 +1,4 @@
-# AliceUI 样式库
+# Alimobstyle 样式库
 
 - order: 1
 
@@ -113,17 +113,40 @@ a {
 .alice-loading {
     margin-bottom: 20px;
 }
+
+.demo {
+    padding: 1rem;
+    color: #fff;
+    background-color: #6C97C2;
+}
+.ali-loading{
+    position: static;
+    margin: 0;
+}
 </style>
 
 <div class="alice-modules"></div>
 
 <script>
-seajs.use(['$', 'gallery/underscore/1.4.4/underscore'], function($, _) {
+window.addEventListener('load', function () {
+    var interval = 500, begin = Date.now(), img = new Image(), timer = setTimeout(handler, interval);
+    window.removeEventListener('load', arguments.callee);
+    img.addEventListener('load', handler, false);
+    img.src = 'https://i.alipayobjects.com/e/201305/Q9jNoeIir.gif?t=' + begin;
 
+    function handler() {
+        clearTimeout(timer);
+        img.removeEventListener('load', handler);
+        //响应在500ms以内算高速网络 高清（HD）标清（SD）
+        document.body.className = (document.body.className + (Date.now() - begin < interval ? ' ali-hd' : ' ali-sd')).trim();
+    }
+}, false);
+
+seajs.use(['$', 'gallery/underscore/1.4.4/underscore'], function($, _) {
     $('.alice-modules').on('mouseenter', '.alice-module-demo', function() {
         $(this).find('.alice-module-sourcecode').fadeIn(200);
     }).on('mouseleave', '.alice-module-demo', function() {
-        $(this).find('.alice-module-sourcecode').fadeOut(200);         
+        $(this).find('.alice-module-sourcecode').fadeOut(200);
     });
 
     $('.alice-modules').on('click', '.alice-module-sourcecode', function() {
@@ -228,6 +251,5 @@ seajs.use(['$', 'gallery/underscore/1.4.4/underscore'], function($, _) {
         list.appendTo('.nav-area ul');
         return list;
     }
-
 });
 </script>

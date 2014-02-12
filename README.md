@@ -1,4 +1,4 @@
-# Alimobstyle 样式库
+# Alimobstyle
 
 - order: 1
 
@@ -114,6 +114,9 @@ a {
     margin-bottom: 20px;
 }
 
+.ali-button{
+    margin: 2px 0;
+}
 .demo {
     padding: 1rem;
     color: #fff;

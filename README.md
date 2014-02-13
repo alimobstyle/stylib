@@ -126,6 +126,10 @@ a {
     position: static;
     margin: 0;
 }
+.ali-flexbox-vertical .ali-flexbox-item{
+    margin: 2px 0;
+    background: #6C97C2;
+}
 </style>
 
 <div class="alice-modules"></div>

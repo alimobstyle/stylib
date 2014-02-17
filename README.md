@@ -119,8 +119,8 @@ a {
 }
 .demo {
     padding: 1rem;
-    color: #fff;
-    background-color: #AAC761;
+    color: #369;
+    background-color: #dae4f0;
 }
 .ali-loading{
     position: static;
@@ -128,7 +128,7 @@ a {
 }
 .ali-flexbox-vertical .ali-flexbox-item{
     margin: 2px 0;
-    background: #6C97C2;
+    background: #dae4f0;
 }
 </style>
 

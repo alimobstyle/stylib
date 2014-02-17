@@ -120,7 +120,7 @@ a {
 .demo {
     padding: 1rem;
     color: #fff;
-    background-color: #6C97C2;
+    background-color: #AAC761;
 }
 .ali-loading{
     position: static;
